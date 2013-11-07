@@ -1,0 +1,4 @@
+rails generate model [name] [column1] [column2] ...
+rake db:migrate
+rails generate active_admin:resource [name of model]
+raisl generate controller [models] **plural
