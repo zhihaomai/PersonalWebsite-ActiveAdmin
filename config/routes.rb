@@ -6,6 +6,8 @@ WebsiteAdmin::Application.routes.draw do
   get "/photos", to: "photos#index"
   get "/blogs", to: "blogs#index"
 
+  match "/*path" => 'application#options', :via => :options
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
