@@ -3,8 +3,12 @@ WebsiteAdmin::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  # resources :blogs
+
   get "/photos", to: "photos#index"
   get "/blogs", to: "blogs#index"
+  get "/blogs/:id", to: "blogs#show"
+  put "/blogs/:id", to: "blogs#update"
 
   match "/*path" => 'application#options', :via => :options
 

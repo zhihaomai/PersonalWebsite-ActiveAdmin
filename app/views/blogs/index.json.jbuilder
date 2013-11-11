@@ -1,3 +1,3 @@
 json.(@blogs) do |blog|
-  json.(blog, :title, :image, :body, :date, :tags)
+  json.(blog, :id, :title, :image, :body, :date, :likes, :dislikes)
 end
